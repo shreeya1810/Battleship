@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Battleship</title>
+  <style></style>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="home">
+		<h1>Battleship</h1>
+		<form method = "POST" action = "/playerOne" class="input">
+			<p>Enter Player One Name</p>
+			<input type="text" id="playerOne" name="playerOne" required> 
+			<p>Enter Player Two Name</p>
+			<input type="text" id="playerTwo" name="playerTwo" required> 
+			<input type="submit" id="submit">
+		</form>
+	</div>
+
+	<div class="footer"></div>
+
+  	<script>
+	  	$("#submit")[0].addEventListener("click", (event) => {
+	  		$("#submit").css("transform", "scale(0.98)");
+		})
+	</script>
+	
+</body>
+</html>

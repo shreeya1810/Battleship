@@ -1,0 +1,167 @@
+body {
+   background-color: #011F3F !important;
+}
+
+h1, h2, h3, p {
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+  font-size: 5em;
+  padding: 1em;
+  margin: 0em;
+}
+
+h2 {
+  font-size: 3em;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 20px;
+  padding: 1em;
+  margin: 0em;
+}
+
+p {
+  font-size: 13px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  height: 768px;
+  padding: 150px 0px 0px 0px;
+}
+
+.input {
+  display: flex;
+  gap: 20px;
+}
+
+input {
+  width: 150px;
+  height: 50px;
+  background-color: #011F3F;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
+  color: #e0e0e0;
+  border: 5px solid #FEF2BF;
+  border-radius: 15px;
+}
+
+.button, .start {
+  background-color: #011F3F;
+  font-family: 'Press Start 2P', cursive;
+  color: #e0e0e0;
+  border-radius: 15px;
+  border: 5px solid #FEF2BF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.start {
+  font-size: 32px;
+}
+
+.button:hover ,.start:hover, .block:hover, .ship:hover { 
+  transform: scale(0.98);  
+} 
+
+.head {
+  display: flex;
+  gap: 10px;
+  flex-direction: column ;
+  align-items: center;
+  margin: 1em;
+  padding: 0em;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.player {
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2em;
+}
+
+.playerOne, .playerTwo {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 500px;
+  height: 500px;
+}
+
+.ships-list { 
+  width: 20%;
+  border-radius: 15px;
+  border: 5px solid #FEF2BF;
+  padding: 15px 52px;
+}
+
+.ship {
+  background-color: #e0ae54;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.carrier {
+  width: 250px;
+}
+
+.battleship { 
+  width: 200px;
+}
+
+.cruiser {
+  width: 150px;
+}
+
+.submarine {
+  width: 150px;
+}
+
+.destroyer {
+  width: 100px;
+}
+
+.block {
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  margin: 1px;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.grid-carrier, .grid-battleship, .grid-cruiser, .grid-submarine, .grid-destroyer {
+  background-color: #e0ae54;
+}
+
+.hide {
+  background-color: #e0e0e0;
+}
+
+.hit {
+  background-color: #ba3f38;
+}
+
+.miss {
+  background-color: #011F3F;
+}

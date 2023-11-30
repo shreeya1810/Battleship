@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Battleship</title>
+  <style></style>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="head">
+		<h2><%= player %>, Place Your Ships.</h2>
+		<form method = "POST" action = "/game"></form>
+	</div>
+
+	<div class="player">
+
+		<div class="grid"></div>
+
+		<div class="ships-list">
+			<p id = "carrier">carrier</p>
+			<div class = "ship carrier" draggable=true></div>
+
+			<p id = "battleship">battleship</p>
+			<div class = "ship battleship" draggable=true></div>
+
+			<p id = "cruiser">cruiser</p>
+			<div class = "ship cruiser" draggable=true></div>
+
+			<p id = "submarine">submarine</p>
+			<div class = "ship submarine" draggable=true></div>
+
+			<p id = "destroyer">destroyer</p>
+			<div class = "ship destroyer" draggable=true></div>	
+		</div>
+
+	</div>
+
+	<div class="footer"></div>
+
+  	<script src="players.js"></script>
+
+</body>
+</html>
