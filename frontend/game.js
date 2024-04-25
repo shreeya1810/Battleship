@@ -19,7 +19,7 @@ fetch('/sendPlayers')
   .then(players => pushNames(players));
 
 
-function makeGrid(grid, width){
+function makeGrid(grid, width) {
   for (let i = 0; i < width*width; i++) {
     const block= document.createElement('div');
     block.classList.add('block');
@@ -28,12 +28,12 @@ function makeGrid(grid, width){
   }
 }
 
-function pushNames(playerNames){
+function pushNames(playerNames) {
   players.push(playerNames[0]);
   players.push(playerNames[1]);
 }
 
-function placeShips(playerShips){  
+function placeShips(playerShips) {  
   for (ship in playerShips[0]) {
     playerShips[0][ship].forEach(block => $(".playerOne .grid .block")[block].classList.add(`grid-${ship}`));
     playerShips[1][ship].forEach(block => $(".playerTwo .grid .block")[block].classList.add(`grid-${ship}`));
@@ -59,12 +59,13 @@ function hide() {
   blocks.forEach(block => block.classList.add("hide")); 
 }
 
-function handleClick(event){
+function handleClick(event) {
 
   if(!checkSunk()){
 
     if (event.target.classList.length === 4) {
       event.target.classList.add("hit");
+
       switchTurn();
 
       let shipName = event.target.classList[3].split('-')[1]
@@ -114,7 +115,7 @@ function handleClick(event){
 
 }
 
-function checkScore(hitName, shipLength){
+function checkScore(hitName, shipLength) {
 
   if (turn == 0) {
     if(playerTwoHits.filter(storedShip => storedShip==hitName).length == shipLength){
@@ -139,7 +140,7 @@ function checkScore(hitName, shipLength){
   }
 }
 
-function checkSunk(){
+function checkSunk() {
 
   if (playerTwoSunk.length == 5){
     $("h2").text(`${players[0]} won!!`);
@@ -152,7 +153,7 @@ function checkSunk(){
   return false;
 }
 
-function restartGame(){
+function restartGame() {
   if (checkSunk()){
     const button = document.createElement("button");
     const buttonContent = document.createTextNode("Play Again");

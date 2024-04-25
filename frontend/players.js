@@ -11,8 +11,7 @@ let cruisers = [];
 let submarines = [];
 let destroyers = [];
 
-
-function allShipsPlaced(){
+function allShipsPlaced() {
   if(count==5){
     return true;
   }
@@ -25,6 +24,11 @@ function createButton(){
   button.classList.add("button");
   button.setAttribute("type", "submit");
   $("form")[0].appendChild(button);
+  button.addEventListener("click", () => {
+    let click = new Audio('/sounds/click.mp3');
+    click.play()
+        .catch(error => alert("Error playing audio: ", error));
+  });
 }
 
 function storePositions(){
@@ -110,6 +114,8 @@ function drop(block){
     if (placeShip(shipPlace, startIndex) === true) {
       shipPlace.remove();
       $(`#${shipPlace.classList[1]}`).remove();
+      var audio = new Audio('/sounds/place.mp3');
+      audio.play();
     }
   })
 }
